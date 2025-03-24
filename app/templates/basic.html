@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename="css/basic.css")}}">
+    <title>Doifs</title>
+</head>
+<body>
+    <header class="header">
+        <ul>
+            <li>Sobre</li>
+            <li>GitHub</li>
+            <li>Contato</li>
+        </ul>
+    </header>
+    <section class="container">
+        <div class="box-title">
+            <span class="title-main"><strong>DOIFs</strong></span>
+            <span class="title-secundary">Diário dos Institutos Federais</span>
+        </div>
+        <div class="box-content">
+            <section class="box-consulta">
+                <form action="{{url_for('page_de_busca')}}" method="get">
+                    <input class="termo-busca style-cards" type="text" placeholder="Digite aqui...">
+                    <select class="style-cards" name="subject" id="subject" aria-placeholder="Ato">
+                        <option value="" selected disabled hidden>Ato de pessoal</option>
+                        <option value="nomeacao">Nomeação</option>
+                        <option value="exoneracao">Exoneração</option>
+                      </select>
+                      <select class="instituto style-cards" name="subject" id="subject" aria-placeholder="instituto">
+                        <option value="" selected disabled hidden>Instituto</option>
+                        <option value="IFAC">IFAC</option>
+                        <option value="IFAL">IFAL</option>
+                        <option value="IFAP">IFAP</option>
+                        <option value="IFAM">IFAM</option>
+                        <option value="IFBA">IFBA</option>
+                        <option value="IF Baiano">IF Baiano</option>
+                        <option value="IFCE">IFCE</option>
+                        <option value="IFB">IFB</option>
+                        <option value="IFG">IFG</option>
+                        <option value="IF Goiano">IF Goiano</option>
+                        <option value="IFES">IFES</option>
+                        <option value="IFMA">IFMA</option>
+                        <option value="IFMG">IFMG</option>
+                        <option value="IFNMG">IFNMG</option>
+                        <option value="IF Sudeste MG">IF Sudeste MG</option>
+                        <option value="IFSULDEMINAS">IFSULDEMINAS</option>
+                        <option value="IFTM">IFTM</option>
+                        <option value="IFMT">IFMT</option>
+                        <option value="IFMS">IFMS</option>
+                        <option value="IFPA">IFPA</option>
+                        <option value="IFPB">IFPB</option>
+                        <option value="IFPE">IFPE</option>
+                        <option value="IF Sertão PE">IF Sertão PE</option>
+                        <option value="IFPI">IFPI</option>
+                        <option value="IFPR">IFPR</option>
+                        <option value="IFRJ">IFRJ</option>
+                        <option value="IFF">IFF</option>
+                        <option value="IFRN">IFRN</option>
+                        <option value="IFRS">IFRS</option>
+                        <option value="IFFar">IFFar</option>
+                        <option value="IFSUL">IFSUL</option>
+                        <option value="IFRO">IFRO</option>
+                        <option value="IFRR">IFRR</option>
+                        <option value="IFSC">IFSC</option>
+                        <option value="IFC">IFC</option>
+                        <option value="IFSP">IFSP</option>
+                        <option value="IFS">IFS</option>
+                        <option value="IFTO">IFTO</option>
+                    </select>
+                    
+                    <button type="submit" class="buscar style-cards">Buscar</button>
+                </form>
+            </section>
+            <section class="box-painel">
+                <a href="{{url_for('painel_de_analise')}}"><button class="painel-analise style-cards">Painel de análise</button></a>
+            </section>
+        </div>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+        <!--Teste-->
+<div class="acessibilidade">
+    <button id="aumentarFonte">A+</button>
+    <button id="diminuirFonte">A-</button>
+    <button id="alternarTema">🌙/☀️</button>
+  </div>
+  
+  
+  <!--Teste-->
+  <script src="{{url_for('static', filename='js/script_tema.js')}}"></script>
+
+
+</body>
+</html>

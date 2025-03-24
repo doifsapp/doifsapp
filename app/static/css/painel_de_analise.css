@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2C3E50;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-main{
+    width: 80%;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.box-title{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.title-main{
+    font-size: 18pt;
+}
+
+.out{
+    width: 60px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #e62222fe;
+    color: white;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.box-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box-card{
+    text-align: center;
+    color: #DB9C74;
+    font-size: 24pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 140px;
+    height: 120px;
+    padding: 12px;
+    margin: 50px;
+    border-radius: 16px;
+    color: rgb(202, 191, 191);
+    box-shadow: #2c2c2c41 0px 3px 3px;
+    background-color: #3E4853;
+}
+.box-analise{
+    margin-top: 12px;
+}
+.create-analise{
+    width: 160px;
+    height: 60px;
+    border-radius: 16px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    border: none;
+    cursor: pointer;
+    background-color: #1ABC9C;
+}
+/* Modal Background */
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+     /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); 
+    margin: 12px;
+}
+
+.modal-container{
+    width: 500px;
+    height: 460px;
+    background-color: rgb(213, 213, 227);
+}
+
+/* Close Button */
+.box-close{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: end;   
+}
+.close {
+    cursor: pointer;
+    font-size: 28px;
+    margin-top: 14px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/*formulario*/
+.form{
+    height: 100%;
+}
+/*box period*/
+
+.box-period{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.title-period{
+    font-size: 16pt;
+}
+.box-period-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+.box-init, .box-end{    
+    padding: 12px;
+    font-size: 10pt;
+}
+.style-card{
+    padding: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 10px;
+    color: #847D7D;
+    border: none;
+    font-size: 10pt;
+}
+/*box adition*/
+.box-adition{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.title-adition{
+    font-size: 16pt;
+}
+.box-adition-input{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+.btn-adition{
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    background-color: rgb(87, 151, 20);
+}
+.box-adition-content{
+    width: 80%;
+    height: 50%;
+    background-color: rgb(238, 245, 245);
+}
+.box-adition-content span{
+    display: inline-block;
+    margin: 6px;
+    padding: 4px;
+    border-radius: 8px;
+    font-size: 8pt;
+    color: white;
+    background-color: cadetblue;
+}
+/*box save*/
+
+.box-save{
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cancel{
+    color: blueviolet;
+    border: none;
+    cursor: pointer;
+    background-color: #3e485300;
+}
+.btn-save{
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    background-color: blueviolet;
+}

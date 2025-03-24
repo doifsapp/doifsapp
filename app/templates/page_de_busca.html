@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename="css/page_de_busca.css")}}">
+    <title>Página de busca</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-main">
+      <section class="box-title">
+        <span class="title-main">
+          DOIFs
+        </span>
+        <span class="subtitle-secundary">
+          Diário dos Institutos Federais
+        </span>
+      </section>
+      <section class="box-out">
+        <a href="{{url_for('home')}}"><button class="out">Sair</button></a>
+      </section>
+    </div>
+  </header>
+ <section class="container">
+  <section class="box-search">
+    <section class="box-consulta">
+        <form action="{{url_for('page_de_busca')}}" method="get">
+            <input class="termo-busca style-cards" type="text" placeholder="Digite aqui...">
+            <select class="ato-busca style-cards" name="subject" id="subject" aria-placeholder="Ato">
+                <option value="" selected disabled hidden>Ato de pessoal</option>
+                <option value="nomeacao">Nomeação</option>
+                <option value="exoneracao">Exoneração</option>
+              </select>
+              <select class="instituto style-cards" name="subject" id="subject" aria-placeholder="instituto">
+                <option value="" selected disabled hidden>Instituto</option>
+                <option value="IFAC">IFAC</option>
+                <option value="IFAL">IFAL</option>
+                <option value="IFAP">IFAP</option>
+                <option value="IFAM">IFAM</option>
+                <option value="IFBA">IFBA</option>
+                <option value="IF Baiano">IF Baiano</option>
+                <option value="IFCE">IFCE</option>
+                <option value="IFB">IFB</option>
+                <option value="IFG">IFG</option>
+                <option value="IF Goiano">IF Goiano</option>
+                <option value="IFES">IFES</option>
+                <option value="IFMA">IFMA</option>
+                <option value="IFMG">IFMG</option>
+                <option value="IFNMG">IFNMG</option>
+                <option value="IF Sudeste MG">IF Sudeste MG</option>
+                <option value="IFSULDEMINAS">IFSULDEMINAS</option>
+                <option value="IFTM">IFTM</option>
+                <option value="IFMT">IFMT</option>
+                <option value="IFMS">IFMS</option>
+                <option value="IFPA">IFPA</option>
+                <option value="IFPB">IFPB</option>
+                <option value="IFPE">IFPE</option>
+                <option value="IF Sertão PE">IF Sertão PE</option>
+                <option value="IFPI">IFPI</option>
+                <option value="IFPR">IFPR</option>
+                <option value="IFRJ">IFRJ</option>
+                <option value="IFF">IFF</option>
+                <option value="IFRN">IFRN</option>
+                <option value="IFRS">IFRS</option>
+                <option value="IFFar">IFFar</option>
+                <option value="IFSUL">IFSUL</option>
+                <option value="IFRO">IFRO</option>
+                <option value="IFRR">IFRR</option>
+                <option value="IFSC">IFSC</option>
+                <option value="IFC">IFC</option>
+                <option value="IFSP">IFSP</option>
+                <option value="IFS">IFS</option>
+                <option value="IFTO">IFTO</option>
+            </select>
+            
+            <button type="submit" class="buscar style-cards">Buscar</button>
+        </form>
+    </section>
+      
+  </section>
+  <section class="box-info-main">
+          
+    <div class="info-results">
+      <span class="number-results">
+        Resultados encontrados para IFAL: 5
+      </span>
+  
+      <div class="cards-result">
+        <span class="concierge">Portaria nº 23 de 55 de Fevereiro de 2029</span>
+        <span class="details">Nomeação | 23/25/2500 | ifal</span>
+        <h5 class="card">
+          REITOR DO INSTITUTO FEDERAL DE ALAGOAS, reconduzido pelo Decreto Presidencial de 13 de junho 2023, publicado no DOU nº 111, 14 de junho de 2023, seção 2, p. 1, no uso de suas atribuições legais e o que consta no Processo nº 23041.037205/2024-45, resolve:
+
+          Art. 1º - Nomear, em caráter efetivo, a candidata ANA KAROLINE DE ALMEIDA SILVA (PPP), para o cargo de Professor do Ensino Básico, Técnico e Tecnológico, na Área de Segurança do Trabalho, D/101, no Campus Palmeira dos Índios, com regime de trabalho de 40 (quarenta) horas semanais com Dedicação Exclusiva, nos termos do art. 9º, inciso I, da Lei nº 8.112/90, tendo em vista o Edital de Abertura nº 02, de 08 de janeiro de 2019, publicado no D.O.U. de 09 de janeiro de 2019, retificado no DOU de 11/01/2019, Edital de Homologação de 22/05/2019 publicado no D.O.U de 24/05/2019, código de vaga 205132 (aposentadoria de Jose dos Santos).
+        </h5>
+        <span class="responsible">CARLOS GUEDES DE LACERDA</span>
+      </div>
+    </div>
+  
+</section> 
+ </section>
+
+ <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+    
+</div>
+  
+
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{url_for('static', filename='js/script.js')}}"></script>-->
+</body>
+</html>

@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1d5ea0;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-main{
+    width: 80%;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.box-title{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.title-main{
+    font-size: 18pt;
+}
+
+.out{
+    width: 60px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #e62222fe;
+    color: white;
+    cursor: pointer;
+}
+.container{
+    
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+/*area de graficos*/
+
+/*box grafico 1*/
+.box-graphic-1{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*grafico overview*/
+.graphic-overview{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #5c5b5b41 0px 3px 3px;
+    background-color: rgb(255, 255, 255);
+}
+/*grafico nomeacoes*/
+.graphic-nomeacao{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #5c5b5b41 0px 3px 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+/*box grafico 2*/
+.box-graphic-2{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+/*grafico exoneracoes*/
+.graphic-exoneracao{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #5c5b5b41 0px 3px 3px;
+    background-color: rgb(255, 255, 255);
+}
+.box-metrics{
+    width: 40%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1d5ea0;
+    box-shadow: #5c5b5b41 0px 3px 3px;
+    background-color: rgb(255, 255, 255);
+}
+.info-metricas{
+    display: flex;
+    flex-direction: column;
+
+}
+.info-metricas span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+    padding: 12px;
+}

@@ -1,0 +1,111 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    display: block;
+}
+.header{
+    color: rgb(43, 40, 40);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin-right: 60px;
+}
+
+.container{
+    
+    height: 80vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.box-title{
+    color: #0E7C2F;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.title-main{
+    font-size: 48pt;
+}
+
+.termo-busca {
+    border: 1px solid black;
+}
+.title-secundary{
+    font-size: 16pt;
+}
+.box-content{
+    margin-top: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.style-cards{
+    padding: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 10px;
+    color: #2c2727;
+    border: 1px solid rgb(165, 155, 155);
+}
+.termo-busca{
+    width: 300px;
+    color: #2C3E50;
+}
+.buscar{
+    background-color: #1ABC9C;
+
+}
+.painel-analise{
+    background-color: #E67E22;
+}
+.buscar, .painel-analise{
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.acessibilidade {
+    position: fixed;
+    right: 10px;
+    top: 20%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.acessibilidade button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.acessibilidade button:hover {
+    background: #0056b3;
+}
+
+.tema-escuro {
+    background: #222;
+    color: #f1f1f1;
+}

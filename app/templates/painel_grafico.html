@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename="css/painel_grafico.css")}}">
+    <title>Painel gráfico</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-main">
+      <section class="box-title">
+        <span class="title-main">
+          DOIFs
+        </span>
+        <span class="subtitle-secundary">
+          Diário dos Institutos Federais
+        </span>
+      </section>
+      <section class="box-out">
+        <a href="{{url_for('home')}}"><button class="out">Sair</button></a>
+      </section>
+    </div>
+  </header>
+ <section class="container">
+   <div class="box-graphic-1">
+    <div class="graphic-overview">
+      <span>Distribuição Geral de Publicações</span>
+      <canvas id="graphic-overview">
+        <span id="jan-overview">10</span>
+        <span id="fev-overview">20</span>
+        <span id="marc-overview">15</span>
+        <span id="abri-overview">30</span>
+        <span id="mai-overview">25</span>
+        <span id="jun-overview">4</span>
+        <span id="jul-overview">35</span>
+        <span id="ago-overview">5</span>
+        <span id="set-overview">4</span>
+        <span id="out-overview">60</span>
+        <span id="nov-overview">5</span>
+        <span id="dez-overview">7</span>
+
+      </canvas>
+
+    </div>
+    <div class="graphic-nomeacao">
+      <span>Distribuição de Nomeações</span>
+      <canvas id="graphic-nomeacao">
+        <span id="jan-nom">10</span>
+        <span id="fev-nom">20</span>
+        <span id="marc-nom">15</span>
+        <span id="abri-nom">30</span>
+        <span id="mai-nom">25</span>
+        <span id="jun-nom">4</span>
+        <span id="jul-nom">35</span>
+        <span id="ago-nom">5</span>
+        <span id="set-nom">4</span>
+        <span id="out-nom">60</span>
+        <span id="nov-nom">5</span>
+        <span id="dez-nom">7</span>
+      </canvas>
+    </div>
+   </div>
+   <div class="box-graphic-2">
+    <div class="graphic-exoneracao">
+      <span>Distribuição de Exonerações</span>
+     <canvas id="graphic-exoneracao">
+      <span id="jan-exo">10</span>
+      <span id="fev-exo">20</span>
+      <span id="marc-exo">15</span>
+      <span id="abri-exo">30</span>
+      <span id="mai-exo">25</span>
+      <span id="jun-exo">4</span>
+      <span id="jul-exo">35</span>
+      <span id="ago-exo">5</span>
+      <span id="set-exo">4</span>
+      <span id="out-exo">60</span>
+      <span id="nov-exo">5</span>
+      <span id="dez-exo">7</span>
+     </canvas>
+    </div>
+    <div class="box-metrics">
+     <div class="info-metricas">
+      <span>Média geral de publicações: 45</span>
+     <span>Média de nomeações: 23</span>
+     <span>Média de exonerações: 34</span>
+     </div>
+    </div>
+   </div>
+ </section>
+
+ <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+<!--Teste-->
+<div class="acessibilidade">
+  <button id="aumentarFonte">A+</button>
+  <button id="diminuirFonte">A-</button>
+  <button id="alternarTema">🌙/☀️</button>
+</div>
+
+<main>
+  <h1>Bem-vindo ao meu site!</h1>
+  <p>Este é um exemplo de acessibilidade com ajuste de fonte e tema.</p>
+</main>
+<!--Teste-->
+
+<script src="script_tema.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{url_for('static', filename='js/graphic.js')}}"></script>
+</body>
+</html>

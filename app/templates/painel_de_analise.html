@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename="css/painel_de_analise.css")}}">
+    <title>Analisador de portarias das IFs</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-main">
+      <section class="box-title">
+        <span class="title-main">
+          DOIFs
+        </span>
+        <span class="subtitle-secundary">
+          Diário dos Institutos Federais
+        </span>
+      </section>
+      <section class="box-out">
+        <a href="{{url_for('home')}}"><button class="out">Sair</button></a>
+      </section>
+    </div>
+  </header>
+ <section class="container">
+    <section class="box-cards">
+      <div>
+        <h5 class="box-card">Analise</h5>
+        <div class="card"><span>Análises históricas de atos de nomeação e exoneração</span></div>
+      </div>
+      <div>
+        <h5 class="box-card">Filtre</h5>
+        <div class="card"><span>Filtros personalizáveis para buscas de atos de pessoal</span></div>
+      </div>
+      <div>
+        <h5 class="box-card">Dados</h5>
+        <div class="card"><span>Dados recuperados via Web crawler e Web scraping do DOU</span></div>
+      </div>
+    </section>
+    <section class="box-analise">
+      <button id="create" class="create-analise">Criar análise +</button>
+    </section>
+    <!--Modal-->
+    <section id="modal-container" class="modal">
+      <div id="mymodal" class="modal-container">
+        <form class="form" action="{{url_for('painel_grafico')}}" method="get">
+          <!--caixa de emcerramento-->
+            <div class="box-close">
+              <span id="myclose" class="close">&times;</span>
+            </div>
+            <!--caixa de intervalo temporal-->
+            <div class="box-period">
+              <span class="title-period">Período</span>
+                <div class="box-period-content">
+                  <div class="box-init">
+                    <span class="init">Inicio</span>
+                    <!--Select-->
+                    <select class="style-card" name="subject-mes" id="subject-mes" aria-placeholder="mes">
+                      <option value="" selected disabled hidden>Mês</option>
+                      <option value="janeiro">Janeiro</option>
+                      <option value="fevereiro">Fevereiro</option>
+                      <option value="março">Março</option>
+                      <option value="abril">Abril</option>
+                      <option value="maio">Maio</option>
+                      <option value="junho">Junho</option>
+                      <option value="julho">Julho</option>
+                      <option value="agosto">Agosto</option>
+                      <option value="setembro">Setembro</option>
+                      <option value="outubro">Outubro</option>
+                      <option value="novembro">Novembro</option>
+                      <option value="dezembro">Dezembro</option>
+                    </select>
+                    <select class="style-card" name="subject-ano" id="subject-ano" aria-placeholder="Ano">
+                      <option value="" selected disabled hidden>Ano</option>
+                      <option value="ano-2018">2018</option>
+                      <option value="ano-2019">2019</option>
+                    </select>
+                  </div>
+                  <div class="box-end">
+                    <span class="end">Fim</span>
+                    <select class="style-card" name="subject-mes" id="subject-mes" aria-placeholder="mes">
+                      <option value="" selected disabled hidden>Mês</option>
+                      <option value="janeiro">Janeiro</option>
+                      <option value="fevereiro">Fevereiro</option>
+                      <option value="março">Março</option>
+                      <option value="abril">Abril</option>
+                      <option value="maio">Maio</option>
+                      <option value="junho">Junho</option>
+                      <option value="julho">Julho</option>
+                      <option value="agosto">Agosto</option>
+                      <option value="setembro">Setembro</option>
+                      <option value="outubro">Outubro</option>
+                      <option value="novembro">Novembro</option>
+                      <option value="dezembro">Dezembro</option>
+                    </select>
+                    <select class="style-card" name="subject-ano" id="subject-ano" aria-placeholder="Ano">
+                      <option value="" selected disabled hidden>Ano</option>
+                      <option value="ano-2018">2018</option>
+                      <option value="ano-2019">2019</option>
+                    </select>
+                  </div>
+                </div>
+            </div>
+            <!--caixa de adiçao de ifs-->
+            <div class="box-adition">
+              <span class="title-adition">Selecionar</span>
+              <div class="box-adition-input">
+                <!--Selecte instituto-->
+                
+                <select class="style-card" name="subject-adition" id="subject-adition" aria-placeholder="instituto">
+                  <option value="" selected disabled hidden>Instituto</option>
+                  <option value="IFAC">IFAC</option>
+                  <option value="IFAL">IFAL</option>
+                  <option value="IFAP">IFAP</option>
+                  <option value="IFAM">IFAM</option>
+                  <option value="IFBA">IFBA</option>
+                  <option value="IF Baiano">IF Baiano</option>
+                  <option value="IFCE">IFCE</option>
+                  <option value="IFB">IFB</option>
+                  <option value="IFG">IFG</option>
+                  <option value="IF Goiano">IF Goiano</option>
+                  <option value="IFES">IFES</option>
+                  <option value="IFMA">IFMA</option>
+                  <option value="IFMG">IFMG</option>
+                  <option value="IFNMG">IFNMG</option>
+                  <option value="IF Sudeste MG">IF Sudeste MG</option>
+                  <option value="IFSULDEMINAS">IFSULDEMINAS</option>
+                  <option value="IFTM">IFTM</option>
+                  <option value="IFMT">IFMT</option>
+                  <option value="IFMS">IFMS</option>
+                  <option value="IFPA">IFPA</option>
+                  <option value="IFPB">IFPB</option>
+                  <option value="IFPE">IFPE</option>
+                  <option value="IF Sertão PE">IF Sertão PE</option>
+                  <option value="IFPI">IFPI</option>
+                  <option value="IFPR">IFPR</option>
+                  <option value="IFRJ">IFRJ</option>
+                  <option value="IFF">IFF</option>
+                  <option value="IFRN">IFRN</option>
+                  <option value="IFRS">IFRS</option>
+                  <option value="IFFar">IFFar</option>
+                  <option value="IFSUL">IFSUL</option>
+                  <option value="IFRO">IFRO</option>
+                  <option value="IFRR">IFRR</option>
+                  <option value="IFSC">IFSC</option>
+                  <option value="IFC">IFC</option>
+                  <option value="IFSP">IFSP</option>
+                  <option value="IFS">IFS</option>
+                  <option value="IFTO">IFTO</option>
+              </select>
+              <button class="btn-adition" type="button">Adicionar +</button>
+              
+              </div>
+              <div class="box-adition-content" id="adition-content">
+                
+              </div>
+            </div>
+            <!--caixa de cancelamento ou conclusão-->
+            <div class="box-save">
+              <button type="button" id="cancel" class="cancel">Cancelar</button>
+              <button type="submit" class="btn-save">Concluir</button>
+            </div>
+        </form>
+       
+      </div>
+    </section>
+    
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
+
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<script src="{{url_for('static', filename='js/modal.js')}}"></script>
+</body>
+</html>
